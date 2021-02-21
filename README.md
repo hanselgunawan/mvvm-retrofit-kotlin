@@ -38,7 +38,7 @@ This file is needed for implementing `RecyclerView`
 ## Kotlin Specific
 ### Data Class
 With `data class`, we don't have to specify `setter` and `getter` because it will automatically set it up for us.
-For example: In Java we have something like this:
+For example: In `Java` we have something like this:
 ```
 class Movie() {
     private String title;
@@ -67,7 +67,7 @@ class Movie() {
     }
 }
 ```
-In Kotlin, we can simply implement that with the following code:
+In `Kotlin`, we can simply implement that with the following code:
 ```
 data class Movie(val title: String, val imageUrl: String) { ... }
 ```
