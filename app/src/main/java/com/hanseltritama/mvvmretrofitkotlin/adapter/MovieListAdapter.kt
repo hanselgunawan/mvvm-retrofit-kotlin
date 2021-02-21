@@ -20,8 +20,8 @@ class MovieListAdapter(
 )
     : RecyclerView.Adapter<MovieListAdapter.MyViewHolder>(){
 
-    fun updateMovieList(movieList: List<MovieModel>) {
-        this.movieList = movieList
+    fun updateMovieList(movieListFromActivity: List<MovieModel>) {
+        movieList = movieListFromActivity
         notifyDataSetChanged()
     }
 
