@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/noResultTv"
+        android:id="@+id/no_result_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="NO RESULT FOUND"
