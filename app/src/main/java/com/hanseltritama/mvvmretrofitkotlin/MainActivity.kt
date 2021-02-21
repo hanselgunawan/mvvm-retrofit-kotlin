@@ -15,8 +15,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MovieListAdapter.ItemClickListener {
 
-    private lateinit var movieList: List<MovieModel>
-    private val adapter: MovieListAdapter? = null
+    private var movieList: List<MovieModel> = ArrayList()
+    private var adapter: MovieListAdapter? = null
     private val movieListViewModel by lazy {
         ViewModelProvider(this).get(MovieListViewModel::class.java)
     }
@@ -31,9 +31,9 @@ class MainActivity : AppCompatActivity(), MovieListAdapter.ItemClickListener {
 
     private fun setupUI() {
         val layoutManager: LinearLayoutManager = GridLayoutManager(this, 1)
-        val movieAdapter = MovieListAdapter(this, movieList, this)
+        adapter = MovieListAdapter(this, movieList, this)
         movie_recycler_view.layoutManager = layoutManager
-        movie_recycler_view.adapter = movieAdapter
+        movie_recycler_view.adapter = adapter
     }
 
     private fun setupObservers() {
